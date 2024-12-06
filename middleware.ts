@@ -12,6 +12,8 @@ export default clerkMiddleware(async (auth, req) => {
 
 export const config = {
   matcher: [
+    "/",
+
     // Skip Clerk and Stripe middleware for /api/webhooks/* route
     "/api/webhooks/(.*)",
 
