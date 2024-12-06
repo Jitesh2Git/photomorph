@@ -7,8 +7,8 @@ import Image from "next/image";
 import React from "react";
 
 const DashboardPage = async ({ searchParams }: SearchParamProps) => {
-  const currentSearchParams = await searchParams;
-  const page = Number(currentSearchParams?.page) || 1;
+  const currSearchParams = await searchParams;
+  const page = Number(currSearchParams?.page) || 1;
   const clerkUser = await currentUser();
   const userId = clerkUser!.id;
   const user = await getUserById(userId);
